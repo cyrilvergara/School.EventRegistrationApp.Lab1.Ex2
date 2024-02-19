@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03dac5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="EVENT REGISTRATION APP"
+        android:textColor="#01645a"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etEventDate"
+        app:layout_constraintStart_toStartOf="@+id/etEventDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEventName"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:hint="Enter Event Name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etEventDate"
+        app:layout_constraintStart_toStartOf="@+id/etEventDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etEventDate"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:hint="Enter Event Date"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etEventOrganizerCompany"
+        app:layout_constraintStart_toStartOf="@+id/etEventOrganizerCompany"
+        app:layout_constraintTop_toBottomOf="@+id/etEventName" />
+
+    <EditText
+        android:id="@+id/etEventOrganizerCompany"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:hint="Enter Event Organizer/Company"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/spinCities"
+        app:layout_constraintStart_toStartOf="@+id/spinCities"
+        app:layout_constraintTop_toBottomOf="@+id/etEventDate" />
+
+    <Spinner
+        android:id="@+id/spinCities"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/white"
+        android:entries="@array/provinces"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/cbNotForProfit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEventOrganizerCompany" />
+
+    <CheckBox
+        android:id="@+id/cbNotForProfit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not-for-Profit"
+        app:layout_constraintBottom_toBottomOf="@+id/cbCorporate"
+        app:layout_constraintEnd_toStartOf="@+id/cbEducational"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/cbCorporate"
+        app:layout_constraintTop_toTopOf="@+id/cbCorporate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/cbEducational"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Educational"
+        app:layout_constraintBottom_toBottomOf="@+id/cbNotForProfit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cbNotForProfit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cbCorporate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Corporate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinCities" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/roundstyle"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventFormat" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundstyle"
+        android:text="RESET"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toEndOf="@+id/btnRegister"
+        app:layout_constraintTop_toTopOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvEventFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="EVENT FORMAT:"
+        android:textColor="#01645a"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCorporate" />
+
+    <TextView
+        android:id="@+id/etOutput"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:hint="DISPLAY HERE ALL THE INFO ENTERED IN THIS ACTIVITY"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEventFormat"
+        app:layout_constraintTop_toBottomOf="@+id/cbEducational">
+
+        <RadioButton
+            android:id="@+id/rBtnInPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In-Person" />
+
+        <RadioButton
+            android:id="@+id/rBtnOnLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On-Line" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
